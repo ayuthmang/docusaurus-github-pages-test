@@ -18,10 +18,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: pnpm/action-setup@v2
         with:
           node-version: 18
-          cache: yarn
+          cache: 'pnpm'
           cache-dependency-path: docs/pnpm-lock.yaml
 
       - name: Install dependencies
